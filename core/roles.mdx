@@ -1,0 +1,58 @@
+---
+title: Système de Rôles
+description: 6 rôles avec permissions granulaires
+icon: user-lock
+---
+
+## Les 6 Rôles
+
+<CardGroup cols={2}>
+  <Card title="Admin" icon="crown">
+    Accès complet système
+  </Card>
+  <Card title="Moderator" icon="shield">
+    Gestion contenus et commandes
+  </Card>
+  <Card title="Employee" icon="user">
+    Opérations quotidiennes
+  </Card>
+  <Card title="Media Buyer" icon="bullhorn">
+    Campagnes marketing
+  </Card>
+  <Card title="Shipper" icon="truck">
+    Gestion livraisons
+  </Card>
+  <Card title="Sub-Shipper" icon="truck-fast">
+    Livraisons assignées
+  </Card>
+</CardGroup>
+
+## Matrice des Permissions
+
+```php
+// config/permissions.php
+'admin' => ['*'], // Tous les accès
+'moderator' => ['products.*', 'orders.*', 'customers.*'],
+'employee' => ['products.view', 'orders.*', 'stock.*'],
+'media_buyer' => ['campaigns.*', 'analytics.marketing'],
+'shipper' => ['deliveries.*', 'sub_shippers.*'],
+'sub_shipper' => ['deliveries.assigned', 'packages.scan'],
+```
+
+## Dashboards Personnalisés
+
+Chaque rôle accède à un dashboard adapté à ses besoins.
+
+[Screenshot: Dashboard Admin]
+
+[Screenshot: Dashboard Media Buyer]
+
+[Screenshot: Dashboard Livreur]
+
+## Protection des Routes
+
+```php
+// Middleware de permission
+Route::middleware(['auth', 'permission:orders.manage'])
+    ->resource('orders', OrderController::class);
+```

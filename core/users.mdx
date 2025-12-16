@@ -1,0 +1,78 @@
+---
+title: Gestion Utilisateurs
+description: CRUD complet des modérateurs et employés
+icon: users-gear
+---
+
+## Types d'Utilisateurs
+
+<CardGroup cols={2}>
+  <Card title="Modérateurs" icon="user-shield">
+    Gestion contenus, commandes, support
+  </Card>
+  <Card title="Employés" icon="user-tie">
+    Traitement quotidien des opérations
+  </Card>
+</CardGroup>
+
+## Interface de Gestion
+
+Chaque utilisateur dispose d'une fiche affichant :
+
+**Informations**
+- Email, téléphone, date inscription
+- Dernière activité
+
+**Statistiques**
+- Commandes confirmées/annulées
+- Taux de réussite
+
+**Actions**
+- Modifier, activer/désactiver, supprimer
+- Envoi email direct
+
+[Screenshot: Liste des utilisateurs]
+
+[Screenshot: Détail utilisateur avec stats]
+
+## Opérations CRUD
+
+### Création
+
+```php
+public function store(Request $request)
+{
+    $validated = $request->validate([
+        'name' => 'required|string|max:255',
+        'email' => 'required|email|unique:users',
+        'role' => 'required|in:moderator,employee',
+    ]);
+    
+    $user = User::create($validated);
+    $user->sendWelcomeNotification();
+    
+    return redirect()->route('users.index');
+}
+```
+
+### Filtres Disponibles
+
+- Rôle (Moderator/Employee)
+- Statut (Actif/Inactif)
+- Performance
+- Date d'inscription
+
+[Screenshot: Filtres et actions groupées]
+
+### Soft Delete
+
+Le système conserve l'historique des utilisateurs supprimés pour traçabilité.
+
+```php
+// Suppression logique
+$user->delete();
+
+// Restauration
+$user->restore();
+```
+

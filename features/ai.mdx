@@ -1,0 +1,63 @@
+---
+title: Intelligence Artificielle
+description: Chatbot contextuel via DeepSeek API
+icon: brain
+---
+
+## Chatbot IA
+
+Assistant intelligent répondant aux questions métier en langage naturel.
+
+<CardGroup cols={2}>
+  <Card title="Contextuel" icon="comments">
+    Adapté au rôle utilisateur
+  </Card>
+  <Card title="Sécurisé" icon="shield">
+    Filtrage des données sensibles
+  </Card>
+  <Card title="Temps Réel" icon="bolt">
+    Insights instantanés
+  </Card>
+  <Card title="Suggestions" icon="lightbulb">
+    Questions recommandées
+  </Card>
+</CardGroup>
+
+## Fonctionnalités
+
+**Questions métier**
+- "Quel est le CA du mois ?"
+- "Combien de commandes en attente ?"
+- "Quels produits en rupture de stock ?"
+
+**Analyse prédictive**
+- Prévisions de ventes
+- Tendances produits
+- Optimisation stock
+
+**Rapports intelligents**
+- Génération automatique
+- Export PDF/Excel
+- Envoi programmé
+
+[Screenshot: Interface chatbot]
+
+[Screenshot: Conversation exemple]
+
+## Implémentation
+
+```php
+// Service DeepSeek
+public function chat(string $message, array $context)
+{
+    return Http::withHeaders([
+        'Authorization' => 'Bearer ' . $this->apiKey,
+    ])->post('https://api.deepseek.com/v1/chat', [
+        'model' => 'deepseek-chat',
+        'messages' => [
+            ['role' => 'system', 'content' => $this->buildPrompt($context)],
+            ['role' => 'user', 'content' => $message]
+        ]
+    ]);
+}
+```

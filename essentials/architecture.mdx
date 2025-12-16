@@ -1,0 +1,70 @@
+---
+title: Architecture Technique
+description: Vue d'ensemble de l'architecture système
+icon: sitemap
+---
+
+## Architecture Globale
+
+```mermaid
+graph TB
+    User[Utilisateur] --> Frontend[Dashboard Alpine.js]
+    Frontend --> Laravel[Laravel API]
+    Laravel --> MySQL[(MySQL)]
+    Laravel --> Redis[(Redis Cache)]
+    Laravel --> DeepSeek[DeepSeek AI API]
+```
+
+## Flux d'Authentification
+
+```mermaid
+sequenceDiagram
+    User->>Login: Credentials
+    Login->>Laravel: Validation ReCAPTCHA
+    Laravel->>MySQL: Check user
+    alt 2FA activé
+        Laravel->>User: Demande code
+        User->>Laravel: Code 2FA
+    end
+    Laravel->>User: Dashboard
+```
+
+## Structure Modulaire
+
+<CardGroup cols={2}>
+  <Card title="Core Métier" icon="cube">
+    Produits, Commandes, Clients, Fournisseurs
+  </Card>
+  <Card title="Logistique" icon="truck">
+    Livreurs, Tarifs, Bons, Suivi
+  </Card>
+  <Card title="Finance" icon="coins">
+    Facturation, Dépenses, Profit
+  </Card>
+  <Card title="Marketing" icon="bullhorn">
+    Media Buyers, Campagnes, KPIs
+  </Card>
+</CardGroup>
+
+## Modèle de Données
+
+```mermaid
+erDiagram
+    User ||--o{ Order : creates
+    User }o--|| Role : has
+    Order ||--|{ OrderItem : contains
+    Order }o--|| Customer : for
+    Order }o--|| Shipper : assigned
+    Product ||--o{ OrderItem : includes
+```
+
+## Permissions par Rôle
+
+| Module | Admin | Moderator | Employee | Media Buyer | Shipper |
+|--------|-------|-----------|----------|-------------|---------|
+| Produits | ✅ | ✅ | ✅ | ❌ | ❌ |
+| Commandes | ✅ | ✅ | ✅ | ❌ | ✅ |
+| Media | ✅ | ❌ | ❌ | ✅ | ❌ |
+| Finance | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Paramètres | ✅ | ❌ | ❌ | ❌ | ❌ |
+

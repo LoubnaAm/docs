@@ -1,0 +1,56 @@
+---
+title: Workflow des Commandes
+description: Flux automatisé de la commande à la livraison
+icon: diagram-project
+---
+
+## Cycle de Vie d'une Commande
+
+<Steps>
+  <Step title="Réception">
+    Client passe commande
+  </Step>
+  <Step title="Validation">
+    Vérification stock automatique
+  </Step>
+  <Step title="Calcul">
+    Frais de livraison selon destination
+  </Step>
+  <Step title="Attribution">
+    Assignation livreur
+  </Step>
+  <Step title="Génération">
+    Bon de livraison numéroté
+  </Step>
+  <Step title="Livraison">
+    Suivi jusqu'à réception
+  </Step>
+</Steps>
+
+## Statuts des Commandes
+
+- **Pending** : En attente de confirmation
+- **Confirmed** : Confirmée par client
+- **Processing** : En préparation
+- **Shipped** : Expédiée
+- **Delivered** : Livrée
+- **Cancelled** : Annulée
+
+[Screenshot: Gestion des commandes]
+
+[Screenshot: Détail commande]
+
+## Gestion du Stock
+
+Mise à jour automatique des quantités à chaque commande confirmée.
+
+**Alertes stock faible**
+
+**Historique des mouvements**
+
+**Calculs en temps réel**
+
+[Screenshot: Interface stock]
+
+[Screenshot: Historique mouvements]
+
