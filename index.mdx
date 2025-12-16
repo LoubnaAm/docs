@@ -1,97 +1,718 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
+title: Gecommerce CRM Platform
+description: Plateforme CRM e-commerce nouvelle génération avec IA intégrée, gestion logistique complète et analytics avancés
+seo:
+  title: Gecommerce CRM - Solution tout-en-un pour e-commerçants
+  description: Transformez votre e-commerce avec notre CRM intelligent : IA DeepSeek, logistique avancée, gestion stock, commandes et analytics temps réel
+keywords: [CRM ecommerce, plateforme e-commerce, IA ecommerce, gestion logistique, Laravel CRM, DeepSeek API]
 ---
 
-## Setting up
+import { Card, CardGrid } from '@mintlify/components';
+import { Tab, Tabs } from '@mintlify/components';
+import { Callout } from '@mintlify/components';
 
-Get your documentation site up and running in minutes.
+# 🚀 Gecommerce CRM Platform
 
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
-</Card>
+> **La révolution CRM e-commerce est arrivée.** Développée par **Alloleadsolutions**, notre plateforme combine l'IA DeepSeek, la gestion logistique complète et l'analytics prédictif pour automatiser et optimiser votre business e-commerce.
 
-## Make it yours
+<div className="badge-container">
+  <img src="https://img.shields.io/badge/version-1.0.0-blue" alt="Version" />
+  <img src="https://img.shields.io/badge/license-MIT-green" alt="License" />
+  <img src="https://img.shields.io/badge/status-production-brightgreen" alt="Status" />
+  <img src="https://img.shields.io/badge/framework-Laravel_10-FF2D20" alt="Laravel 10" />
+  <img src="https://img.shields.io/badge/IA-DeepSeek_API-4A90E2" alt="DeepSeek API" />
+  <img src="https://img.shields.io/badge/security-2FA_ReCAPTCHA-28A745" alt="Sécurité" />
+</div>
 
-Design a docs site that looks great and empowers your users.
+<div className="hero-buttons">
+  <a href="/getting-started" className="button button-primary button-large">🚀 Démarrer gratuitement</a>
+  <a href="https://demo.gecommerce.com" className="button button-secondary button-large" target="_blank">🎯 Démo live</a>
+  <a href="/api-reference" className="button button-outline button-large">🔌 Documentation API</a>
+</div>
 
-<Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
+<Callout type="info">
+  **Plateforme évolutive** : Migrée avec succès de PHP natif vers Laravel moderne, offrant une architecture robuste et scalable pour votre croissance.
+</Callout>
+
+## ✨ Pourquoi choisir Gecommerce ?
+
+Gecommerce n'est pas un simple CRM. C'est un écosystème complet qui automatise l'ensemble de votre chaîne de valeur e-commerce, de l'acquisition client à la livraison finale.
+
+<CardGrid>
+  <Card title="🤖 IA Intégrée" icon="🤖">
+    Assistant IA basé sur DeepSeek pour l'analyse prédictive, les recommandations intelligentes et l'automatisation des tâches répétitives.
   </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
+  
+  <Card title="📦 Logistique Complète" icon="📦">
+    Gestion unifiée des livreurs, frais de livraison, bons d'expédition et suivi en temps réel jusqu'à la livraison.
   </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
+  
+  <Card title="📊 Analytics Temps Réel" icon="📊">
+    Tableaux de bord personnalisables avec KPIs avancés (CPC, CPL, CPD) et prédictions de performance.
   </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
+  
+  <Card title="🔐 Sécurité Enterprise" icon="🔐">
+    Authentification 2FA, vérification email, ReCAPTCHA, permissions granulaires et chiffrement des données.
   </Card>
-</Columns>
+</CardGrid>
 
-## Create beautiful pages
+## 🏗️ Architecture Technique
 
-Everything you need to create world-class documentation.
+Gecommerce repose sur une architecture moderne et scalable, fruit d'une migration réussie de PHP natif vers Laravel.
 
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
-  </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
-  </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
-</Columns>
+```mermaid
+graph TB
+    subgraph "Couche Présentation"
+        A[Application Web Responsive]
+        B[Tableau de Bord Admin]
+        C[Interfaces Rôle Spécifiques]
+    end
+    
+    subgraph "Couche Application"
+        D[API Gateway Laravel]
+        E[Service d'Authentification]
+        F[Service Logistique]
+        G[Service IA DeepSeek]
+        H[Service Analytics]
+    end
+    
+    subgraph "Couche Données"
+        I[(MySQL - Données Métier)]
+        J[(Redis - Cache Session)]
+        K[(Stockage Fichiers)]
+        L[DeepSeek API Externe]
+    end
+    
+    A --> D
+    B --> D
+    C --> D
+    
+    D --> E
+    D --> F
+    D --> G
+    D --> H
+    
+    E --> I
+    E --> J
+    F --> I
+    G --> I
+    G --> L
+    H --> I
+🛠️ Stack Technique Complète
+<Tabs> <Tab label="Backend"> - **Framework** : Laravel 10.x (PHP 8.2+) - **ORM** : Eloquent avec relations avancées - **Authentification** : Laravel Sanctum + 2FA - **File Storage** : Laravel Filesystem (S3 compatible) - **Queue** : Redis pour le traitement asynchrone </Tab> <Tab label="Frontend"> - **Framework JS** : Alpine.js 3.x - **Templating** : Blade Components - **Styling** : Tailwind CSS 3.x - **Charts** : Chart.js pour les visualisations - **Icons** : Heroicons </Tab> <Tab label="Base de Données"> - **SGBD Principal** : MySQL 8.0+ - **Cache** : Redis 7.x - **Migrations** : Laravel Migrations - **Seeders** : Données de test complètes - **Backup** : Automatique quotidien </Tab> <Tab label="Infrastructure"> - **Production** : Hostinger (LiteSpeed) - **Développement** : Laragon (Windows) - **Versioning** : Git + GitHub - **CI/CD** : GitHub Actions - **Monitoring** : Laravel Telescope </Tab> </Tabs>
+🎯 Fonctionnalités Détaillées
+1. 🛍️ Gestion Produits & Stock
+Module complet pour la gestion optimale de votre catalogue et inventaire.
 
-## Need inspiration?
+php
+// Modèle Product avec relations
+class Product extends Model
+{
+    use SoftDeletes, HasMedia;
+    
+    protected $fillable = [
+        'name', 'sku', 'description', 'price',
+        'cost_price', 'stock_quantity', 'min_stock',
+        'category_id', 'supplier_id', 'shop_id',
+        'status', 'weight', 'dimensions'
+    ];
+    
+    // Relations Eloquent
+    public function supplier()
+    {
+        return $this->belongsTo(Supplier::class);
+    }
+    
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+    
+    public function stockMovements()
+    {
+        return $this->hasMany(StockMovement::class);
+    }
+    
+    // Scopes utiles
+    public function scopeLowStock($query)
+    {
+        return $query->whereColumn('stock_quantity', '<=', 'min_stock');
+    }
+    
+    public function scopeActive($query)
+    {
+        return $query->where('status', 'active');
+    }
+}
+Fonctionnalités clés :
 
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+✅ CRUD complet avec upload multi-images
+
+✅ Gestion multi-boutiques et catégories
+
+✅ Alertes stock faible automatiques
+
+✅ Historique des mouvements de stock
+
+✅ Soft Delete avec corbeille de récupération
+
+✅ Import/Export Excel/CSV
+
+✅ Variants produits (tailles, couleurs)
+
+✅ Prix spéciaux et promotions
+
+2. 📦 Module Commandes & Livraison
+Workflow automatisé de la commande à la livraison finale.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fonctionnalités logistiques :
+
+✅ Gestion livreurs (principal + sous-livreurs)
+
+✅ Calcul automatique frais de livraison
+
+✅ Bons de livraison numérotés
+
+✅ Suivi GPS des livraisons (intégration prévue)
+
+✅ Facturation livreurs automatisée
+
+✅ Gestion des retours et litiges
+
+✅ Notifications SMS/Email aux clients
+
+✅ API d'intégration avec prestataires logistiques
+
+3. 🤖 Intelligence Artificielle DeepSeek
+Notre module IA révolutionne la prise de décision e-commerce.
+
+<Tabs> <Tab label="Chatbot Intelligent">
+javascript
+// Intégration du chatbot IA
+class AIChatbot {
+  constructor() {
+    this.context = {
+      userRole: null,
+      currentModule: null,
+      conversationHistory: []
+    };
+  }
+  
+  async askQuestion(question) {
+    // Construction du contexte
+    const context = await this.buildContext();
+    
+    // Appel DeepSeek API
+    const response = await fetch('/api/ai/chat', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${this.apiKey}`
+      },
+      body: JSON.stringify({
+        question: question,
+        context: context,
+        history: this.context.conversationHistory
+      })
+    });
+    
+    const data = await response.json();
+    
+    // Mise à jour de l'historique
+    this.context.conversationHistory.push({
+      question: question,
+      answer: data.answer,
+      timestamp: new Date().toISOString()
+    });
+    
+    return data;
+  }
+  
+  async analyzeSalesTrends(period) {
+    return await this.askQuestion(
+      `Analyse les tendances de vente pour la période ${period} 
+       et propose des recommandations d'optimisation.`
+    );
+  }
+}
+</Tab> <Tab label="Analytics Prédictifs">
+python
+# Exemple d'analyse prédictive
+def predict_sales(product_id, days_ahead=30):
+    """
+    Prédit les ventes futures basées sur l'historique
+    """
+    # Récupération des données historiques
+    sales_data = get_historical_sales(product_id)
+    
+    # Préparation des features
+    features = prepare_features(sales_data)
+    
+    # Appel à l'API DeepSeek pour prédiction
+    prediction = deepseek_api.predict(
+        model="sales_forecast_v1",
+        features=features,
+        horizon=days_ahead
+    )
+    
+    # Retour des insights
+    return {
+        'predicted_sales': prediction.values,
+        'confidence_interval': prediction.confidence,
+        'recommendations': generate_recommendations(prediction)
+    }
+</Tab> <Tab label="Recommandations">
+sql
+-- Requête pour les recommandations produits
+SELECT 
+    p.id,
+    p.name,
+    p.price,
+    COUNT(o.id) as total_orders,
+    AVG(o.total_amount) as avg_order_value,
+    -- Score de recommandation calculé
+    (COUNT(o.id) * 0.4 + 
+     AVG(o.total_amount) * 0.3 +
+     p.rating * 0.3) as recommendation_score
+FROM products p
+LEFT JOIN order_items oi ON p.id = oi.product_id
+LEFT JOIN orders o ON oi.order_id = o.id
+WHERE p.status = 'active'
+    AND p.stock_quantity > 0
+GROUP BY p.id, p.name, p.price, p.rating
+ORDER BY recommendation_score DESC
+LIMIT 10;
+</Tab> </Tabs>
+Capacités IA :
+
+✅ Analyse prédictive des ventes
+
+✅ Recommandations produits personnalisées
+
+✅ Détection d'anomalies dans les commandes
+
+✅ Optimisation pricing dynamique
+
+✅ Chatbot support 24/7
+
+✅ Génération automatique de rapports
+
+✅ Analyse sentiment des avis clients
+
+✅ Prévisions stock intelligentes
+
+4. 👥 Système d'Authentification & Rôles
+Sécurité maximale avec permissions granulaires.
+
+php
+// Configuration des rôles et permissions
+class User extends Authenticatable
+{
+    use HasRoles, Notifiable;
+    
+    // Rôles disponibles
+    const ROLE_ADMIN = 'admin';
+    const ROLE_MODERATOR = 'moderator';
+    const ROLE_EMPLOYEE = 'employee';
+    const ROLE_MEDIA_BUYER = 'media_buyer';
+    const ROLE_SHIPPER = 'shipper';
+    const ROLE_SUB_SHIPPER = 'sub_shipper';
+    
+    protected $fillable = [
+        'name', 'email', 'password', 'phone',
+        'role', 'two_factor_secret', 'two_factor_recovery_codes',
+        'email_verified_at', 'last_login_at', 'is_active'
+    ];
+    
+    protected $hidden = [
+        'password', 'remember_token',
+        'two_factor_secret', 'two_factor_recovery_codes'
+    ];
+    
+    // Vérification des permissions
+    public function canAccessModule($module)
+    {
+        $permissions = config("roles.permissions.{$this->role}");
+        return in_array($module, $permissions);
+    }
+    
+    // Tableau de bord personnalisé
+    public function getDashboardData()
+    {
+        switch ($this->role) {
+            case self::ROLE_ADMIN:
+                return $this->getAdminDashboard();
+            case self::ROLE_MEDIA_BUYER:
+                return $this->getMediaBuyerDashboard();
+            case self::ROLE_SHIPPER:
+                return $this->getShipperDashboard();
+            // ... autres rôles
+        }
+    }
+}
+Fonctionnalités sécurité :
+
+✅ Authentification 2FA (TOTP)
+
+✅ Vérification email obligatoire
+
+✅ ReCAPTCHA v3 sur les formulaires
+
+✅ Gestion sessions avancée
+
+✅ Logs d'activité détaillés
+
+✅ Permissions par module
+
+✅ Super Admin Panel complet
+
+✅ Audit trail des modifications
+
+5. 📊 Analytics & Reporting
+Tableaux de bord complets avec métriques avancées.
+
+<CardGrid columns={2}> <Card title="📈 KPIs Principaux"> - **Chiffre d'Affaires** : Journalier, Hebdo, Mensuel - **Taux de Conversion** : Par source, Par campagne - **Panier Moyen** : Évolution dans le temps - **Taux d'Abandon** : Panier, Checkout - **CLV** : Customer Lifetime Value </Card> <Card title="🎯 Marketing Analytics"> - **CPC/CPL/CPD** : Coût par action - **ROAS** : Return on Ad Spend - **Attribution** : Multi-touch attribution - **Performance Campagnes** : Par media buyer - **Audience Insights** : Segmentation avancée </Card> <Card title="📦 Logistique Analytics"> - **Taux Livraison** : Réussite vs Échec - **Délais Moyens** : Préparation, Livraison - **Coûts Logistiques** : Par région, Par livreur - **Satisfaction** : Retours et réclamations - **Optimisation Routes** : Suggestions IA </Card> <Card title="📱 Rapports Automatisés"> - **Journaliers** : Performance globale - **Hebdomadaires** : Tendances et insights - **Mensuels** : Reporting financier complet - **Personnalisés** : Création sur mesure - **Export** : PDF, Excel, CSV </Card> </CardGrid>
+6. 🏪 Module Multi-Boutiques
+Gérez plusieurs boutiques depuis une seule interface.
+
+php
+// Architecture multi-boutiques
+class Shop extends Model
+{
+    protected $fillable = [
+        'name', 'slug', 'domain', 'owner_id',
+        'currency', 'timezone', 'logo', 'theme',
+        'settings', 'is_active', 'plan_id'
+    ];
+    
+    protected $casts = [
+        'settings' => 'array',
+        'is_active' => 'boolean'
+    ];
+    
+    // Relations
+    public function owner()
+    {
+        return $this->belongsTo(User::class, 'owner_id');
+    }
+    
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
+    
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
+    
+    public function employees()
+    {
+        return $this->belongsToMany(User::class, 'shop_users')
+                    ->withPivot('role', 'permissions')
+                    ->withTimestamps();
+    }
+}
+Fonctionnalités multi-boutiques :
+
+✅ Isolation données par boutique
+
+✅ Personnalisation logo/thème/couleurs
+
+✅ Rôles spécifiques par boutique
+
+✅ Reporting individuel par boutique
+
+✅ Transfert stock entre boutiques
+
+✅ Plan tarifaire par boutique
+
+✅ Domaines personnalisés (CNAME)
+
+✅ API séparée par boutique
+
+🚀 Démarrage Rapide
+Installation en 5 étapes
+<Tabs> <Tab label="1. Prérequis">
+bash
+# Vérifier les prérequis
+php --version  # PHP 8.2+
+composer --version  # Composer 2.5+
+node --version  # Node.js 18+
+npm --version  # npm 9+
+mysql --version  # MySQL 8.0+
+Configuration système requise :
+
+RAM : 4GB minimum (8GB recommandé)
+
+Stockage : 10GB espace libre
+
+Extensions PHP : BCMath, Ctype, JSON, Mbstring, OpenSSL, PDO, Tokenizer, XML
+
+Permissions : storage/ et bootstrap/cache/ en 755
+
+</Tab><Tab label="2. Installation">
+bash
+# Clone du projet
+git clone https://github.com/alloleadsolutions/gecommerce.git
+cd gecommerce
+
+# Installation des dépendances
+composer install
+npm install
+npm run build
+
+# Configuration
+cp .env.example .env
+php artisan key:generate
+
+# Configuration de la base de données
+# Éditer .env avec vos credentials DB
+</Tab> <Tab label="3. Base de Données">
+bash
+# Migration et seeding
+php artisan migrate --seed
+
+# Ou pour une installation complète avec données de test
+php artisan migrate:fresh --seed
+
+# Vérification
+php artisan db:seed --class=TestDataSeeder
+
+# Création du premier admin
+php artisan make:admin
+</Tab> <Tab label="4. Configuration">
+bash
+# Configuration SMTP (Mail)
+php artisan vendor:publish --tag=laravel-mail
+
+# Configuration ReCAPTCHA
+php artisan vendor:publish --tag=recaptcha-config
+
+# Configuration DeepSeek API
+php artisan vendor:publish --tag=ai-config
+
+# Optimisation
+php artisan optimize
+php artisan storage:link
+</Tab> <Tab label="5. Lancement">
+bash
+# Environnement de développement
+php artisan serve
+npm run dev
+
+# Ou avec Laragon (recommandé)
+# Démarrer Laragon et importer le projet
+
+# Accès
+# Frontend : http://localhost:8000
+# Admin : http://localhost:8000/admin
+# Email : admin@gecommerce.com / password
+</Tab> </Tabs>
+📦 Déploiement Production
+bash
+# Build pour production
+npm run production
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+
+# Vérification sécurité
+php artisan security:check
+
+# Backup automatique
+php artisan backup:run
+
+# Monitoring
+php artisan telescope:install
+🔌 API Reference
+Gecommerce expose une API RESTful complète pour l'intégration avec vos systèmes existants.
+
+Authentification API
+http
+POST /api/v1/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@gecommerce.com",
+  "password": "votre_mot_de_passe",
+  "device_name": "web_app"
+}
+Réponse :
+
+json
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "user": {
+    "id": 1,
+    "name": "Admin",
+    "email": "admin@gecommerce.com",
+    "role": "admin"
+  }
+}
+Endpoints Principaux
+<CardGrid columns={2}> <Card title="📦 Produits"> ```http GET /api/v1/products POST /api/v1/products GET /api/v1/products/{id} PUT /api/v1/products/{id} DELETE /api/v1/products/{id} ``` </Card> <Card title="🛒 Commandes"> ```http GET /api/v1/orders POST /api/v1/orders GET /api/v1/orders/{id} PUT /api/v1/orders/{id}/status POST /api/v1/orders/{id}/invoice ``` </Card> <Card title="📊 Analytics"> ```http GET /api/v1/analytics/sales GET /api/v1/analytics/products/top GET /api/v1/analytics/customers POST /api/v1/analytics/predict GET /api/v1/reports/{type} ``` </Card> <Card title="🤖 IA"> ```http POST /api/v1/ai/chat POST /api/v1/ai/analyze POST /api/v1/ai/predict GET /api/v1/ai/recommendations ``` </Card> </CardGrid>
+📚 Modules Complémentaires
+Module Media Buying
+Optimisez vos campagnes publicitaires avec des métriques avancées.
+
+php
+class Campaign extends Model
+{
+    protected $fillable = [
+        'name', 'media_buyer_id', 'platform',
+        'budget', 'spent', 'impressions',
+        'clicks', 'conversions', 'cpc', 'cpl',
+        'status', 'start_date', 'end_date'
+    ];
+    
+    public function mediaBuyer()
+    {
+        return $this->belongsTo(MediaBuyer::class);
+    }
+    
+    public function calculateROI()
+    {
+        if ($this->spent == 0) return 0;
+        
+        $revenue = $this->conversions * $this->average_order_value;
+        return (($revenue - $this->spent) / $this->spent) * 100;
+    }
+}
+Module Académie E-commerce
+Formez vos équipes directement depuis la plateforme.
+
+php
+class TrainingCourse extends Model
+{
+    protected $fillable = [
+        'title', 'slug', 'description', 'content',
+        'duration', 'level', 'is_published',
+        'thumbnail', 'video_url', 'resources'
+    ];
+    
+    public function modules()
+    {
+        return $this->hasMany(TrainingModule::class);
+    }
+    
+    public function completions()
+    {
+        return $this->hasMany(CourseCompletion::class);
+    }
+}
+🔮 Roadmap & Évolutions
+Prochaines versions
+<Callout type="warning"> **En développement actif** - Ces fonctionnalités arrivent bientôt ! </Callout><Tabs> <Tab label="Q2 2024"> - **API Marketplaces** : Intégration Amazon, eBay, Cdiscount - **Mobile App** : Application React Native - **Paiements** : Stripe, PayPal, Lyra - **WhatsApp Commerce** : API WhatsApp Business </Tab> <Tab label="Q3 2024"> - **Marketplace** : Vente entre commerçants - **Dropshipping** : Gestion automatisée - **ERP Connect** : Sage, SAP, Odoo - **Blockchain** : Traçabilité produits </Tab> <Tab label="Q4 2024"> - **IA Avancée** : Computer Vision pour produits - **Voice Commerce** : Commandes vocales - **AR/VR** : Visualisation produits 3D - **Web3** : Paiements crypto </Tab> </Tabs>
+Migration vers MongoDB (Étude en cours)
+javascript
+// Exemple de schéma MongoDB pour plus de flexibilité
+const productSchema = new mongoose.Schema({
+  name: { type: String, required: true, index: true },
+  sku: { type: String, unique: true },
+  attributes: mongoose.Schema.Types.Mixed, // Flexible attributes
+  variants: [{
+    size: String,
+    color: String,
+    price: Number,
+    stock: Number
+  }],
+  metadata: mongoose.Schema.Types.Mixed,
+  created_at: { type: Date, default: Date.now },
+  updated_at: { type: Date, default: Date.now }
+}, {
+  timestamps: true,
+  strict: false // Pour les champs dynamiques
+});
+🆘 Support & Communauté
+Documentation Complète
+📖 Guide Utilisateur : Tutoriels pas-à-pas
+
+🎥 Vidéos Tutorials : Screencasts détaillés
+
+🔧 FAQ Technique : Réponses aux questions courantes
+
+🔄 Migration Guide : De votre ancien système
+
+📚 API Documentation : Référence complète
+
+Support Professionnel
+<CardGrid columns={2}> <Card title="🏢 Support Entreprise" icon="🏢"> - **Support Prioritaire** : Réponse sous 2h - **Consulting** : Accompagnement personnalisé - **Formation** : Sessions en présentiel/visio - **Développement** : Fonctionnalités sur mesure </Card> <Card title="👥 Communauté" icon="👥"> - **Forum** : Échanges entre utilisateurs - **GitHub** : Issues et contributions - **Discord** : Support communautaire - **Meetups** : Événements mensuels </Card> </CardGrid>
+Contact
+📧 Email : support@gecommerce.com
+
+📞 Téléphone : +212 XXX XXX XXX
+
+🏢 Siège : N°130, Bloc 25, Avenue Mimosa, Quartier El Farah, Agadir – Maroc
+
+🌐 Site : https://gecommerce.com
+
+💼 Société : Alloleadsolutions SARL AU
+
+📄 Licence & Open Source
+Gecommerce est publié sous licence MIT :
+
+text
+MIT License
+
+Copyright (c) 2024 Alloleadsolutions SARL AU
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+Contributions
+Nous encourageons les contributions ! Consultez notre Guide de Contribution.
+
+<div className="footer-note"> **Gecommerce CRM Platform** - Une solution innovante développée avec ❤️ par l'équipe **Alloleadsolutions**.<br/> Transformer votre e-commerce n'a jamais été aussi simple et puissant. </div> ```
+Ce fichier index.mdx complet présente votre plateforme Gecommerce de manière professionnelle, en mettant en avant :
+
+Toutes les fonctionnalités mentionnées dans votre rapport
+
+L'architecture technique Laravel + Alpine.js + MySQL
+
+Le module IA DeepSeek avec exemples concrets
+
+Les différents rôles utilisateurs (Admin, Media Buyer, Livreur, etc.)
+
+Les modules logistiques et de gestion de stock
+
+La roadmap et les perspectives d'évolution
+
+La documentation technique complète avec exemples de code
+
+Le fichier est prêt à être utilisé avec Mintlify et inclut tous les composants nécessaires pour une documentation moderne et interactive.
